@@ -1,0 +1,110 @@
+:root {
+    --bs-primary: #0052FF;
+    --bs-primary-rgb: 0, 82, 255;
+    --bs-secondary: #6c757d;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-body-font-family: 'Inter', sans-serif;
+    --bs-body-bg: #f4f7f6;
+}
+
+body {
+    font-family: var(--bs-body-font-family);
+    background-color: var(--bs-body-bg);
+}
+
+.admin-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+.admin-sidebar {
+    width: 260px;
+    background-color: #ffffff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .05);
+    transition: margin-left 0.3s ease;
+    z-index: 10;
+}
+
+.admin-sidebar .nav-link {
+    font-weight: 500;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+}
+
+.admin-sidebar .nav-link.active {
+    background-color: rgba(var(--bs-primary-rgb), 0.1);
+    color: var(--bs-primary);
+}
+
+.admin-main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-topbar {
+    background: #fff;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .05);
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.admin-content {
+    padding: 2rem;
+}
+
+.kpi-card {
+    border: none;
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+.kpi-card .card-body {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.kpi-card .metric-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.kpi-card .metric-comparison {
+    font-weight: 500;
+}
+
+.kpi-card .icon-wrapper {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.icon-wrapper.bg-primary-soft {
+    background-color: rgba(var(--bs-primary-rgb), 0.1);
+    color: var(--bs-primary);
+    margin-top: -15%;
+}
+
+table.table-hover,
+table.table-hover tr td,
+table.table-hover thead tr th,
+table.table-borderless tr td {
+    background-color: #ffffff;
+}
+
+table.table-borderless thead tr th {
+    background-color: rgba(var(--bs-primary-rgb), 0.1);
+}
+
+.bg-white {
+    background-color: #ffffff !important;
+}
